@@ -1,4 +1,4 @@
-# Project NAME 
+# Projet TIAGO et UBIBOT
 
 ## Project detail 
 Projet de XR avec Meta Quest 3. \
