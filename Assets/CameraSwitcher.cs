@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
-    public Camera xrCamera;
+    //public Camera xrCamera;
     public Camera FlyCamera;
 
     private bool usingSpectator = false;
@@ -10,12 +10,12 @@ public class CameraSwitcher : MonoBehaviour
     void Start()
     {
         // Assure que les deux caméras sont actives
-        xrCamera.gameObject.SetActive(true);
-        FlyCamera.gameObject.SetActive(true);
+        //xrCamera.gameObject.SetActive(true);
+        FlyCamera.gameObject.SetActive(false);
 
         // XR par défaut sur le PC
-        xrCamera.depth = 1;
-        FlyCamera.depth = 0;
+        //xrCamera.depth = 1;
+        //FlyCamera.depth = 0;
     }
 
     void Update()
@@ -24,7 +24,7 @@ public class CameraSwitcher : MonoBehaviour
         {
             usingSpectator = !usingSpectator;
 
-            if (usingSpectator)
+            /*if (usingSpectator)
             {
                 // Spectator prend la priorité sur le PC
                 FlyCamera.depth = 2;
@@ -35,7 +35,8 @@ public class CameraSwitcher : MonoBehaviour
                 // XR reprend la priorité
                 xrCamera.depth = 2;
                 FlyCamera.depth = 1;
-            }
+            }*/
+            FlyCamera.gameObject.SetActive(!usingSpectator);
         }
     }
 }
