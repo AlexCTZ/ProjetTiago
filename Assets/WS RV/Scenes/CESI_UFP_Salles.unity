@@ -6900,7 +6900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xrCamera: {fileID: 1004548749}
-  spectatorCamera: {fileID: 1746371519}
+  FlyCamera: {fileID: 1746371519}
 --- !u!4 &2044560664
 Transform:
   m_ObjectHideFlags: 0
