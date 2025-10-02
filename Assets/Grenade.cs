@@ -8,9 +8,10 @@ public class Grenade : MonoBehaviour
     [Header("Explosion Settings")]
     public float explosionRadius = 5f;
     public float extinguishPower = 100f;
-    public ParticleSystem explosionEffect;
+    //public ParticleSystem explosionEffect;
     public AudioSource explosionSound;
     public AudioSource pinSound;
+    [SerializeField] GameObject foamGo;
 
     [Header("Grenade State")]
     public GameObject pinObject;
@@ -76,10 +77,9 @@ public class Grenade : MonoBehaviour
 
     void Explode()
     {
-
         // Effets
-        if (explosionEffect != null)
-            explosionEffect.Play();
+        if (foamGo != null)
+            foamGo.SetActive(true);
 
         if (explosionSound != null)
             explosionSound.Play();
@@ -101,13 +101,13 @@ public class Grenade : MonoBehaviour
 
     IEnumerator DestroyAfterEffects()
     {
-        float delay = explosionEffect != null ? explosionEffect.main.duration : 2f;
-
+        float delay = 2f;
         GetComponent<Collider>().enabled = false;
         if (TryGetComponent<MeshRenderer>(out var renderer))
             renderer.enabled = false;
 
         yield return new WaitForSeconds(delay);
+        foamGo.SetActive(false);
         Destroy(gameObject);
     }
 }
