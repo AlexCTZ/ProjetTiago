@@ -3769,12 +3769,6 @@ CapsuleCollider:
     type: 3}
   m_PrefabInstance: {fileID: 950972980}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &1004548749 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6566713091591869579, guid: 1a7ee4cf66e19014dbfa3f7049d02208,
-    type: 3}
-  m_PrefabInstance: {fileID: 1575521639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1020940699 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3168380273592157281, guid: 10a9243d5827adb4f8ab7a166b25b63e,
@@ -4015,6 +4009,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 186.0001, y: 208.00003, z: 14.74632}
   m_Center: {x: -0.000007629391, y: 104.00004, z: -3.426402}
+--- !u!1 &1191406758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7704827549310072518, guid: a91963d6cd7aca047826fd5e1cad15bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1837675026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1191406762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191406758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4a14397d1a22047a6cab72ff53586d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spectatorCamera: {fileID: 1746371519}
+  markerPrefab: {fileID: 4007661656081921649, guid: 0f1d643e683115945bd86df6d0f5e1fa,
+    type: 3}
+  cameraSwitcher: {fileID: 2044560663}
 --- !u!114 &1235126257 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7222202781671157494, guid: 1a7ee4cf66e19014dbfa3f7049d02208,
@@ -6717,6 +6733,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7704827549310072518, guid: a91963d6cd7aca047826fd5e1cad15bd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1191406762}
     - targetCorrespondingSourceObject: {fileID: 7704827549224607522, guid: a91963d6cd7aca047826fd5e1cad15bd,
         type: 3}
       insertIndex: -1
@@ -6899,7 +6919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100968658f7ef044eac8ac232ed4228c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xrCamera: {fileID: 1004548749}
   FlyCamera: {fileID: 1746371519}
 --- !u!4 &2044560664
 Transform:
